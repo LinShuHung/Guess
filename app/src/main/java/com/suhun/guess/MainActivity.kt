@@ -2,6 +2,7 @@ package com.suhun.guess
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.suhun.guess.databinding.ActivityMainBinding
 import com.suhun.guess.databinding.LinearMainBinding
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         //1.ConstraintLayout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.d("MainActivity","secret_number:"+secretNumber.randomNumber.toString())
 //        binding.count.text = secretNumber.randomNumber.toString()
 //        binding.information.text = secretNumber.verify(88)
     }
