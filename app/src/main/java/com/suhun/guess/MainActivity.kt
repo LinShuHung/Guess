@@ -2,6 +2,7 @@ package com.suhun.guess
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.suhun.guess.databinding.ActivityMainBinding
 import com.suhun.guess.databinding.LinearMainBinding
 //1.ConstraintLayout
@@ -29,5 +30,10 @@ class MainActivity : AppCompatActivity() {
 //        binding.count.text = secretNumber.randomNumber.toString()
 //        binding.information.text = secretNumber.verify(88)
     }*/
+
+    fun check(view:View){
+        binding.information.text = secretNumber.verify(binding.userInput.text.toString().toInt())
+        binding.count.text = "${secretNumber.count.toString()} times"
+    }
 
 }
