@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:hint="Please enter a number(1-100)"
+        android:hint="@string/please_enter_a_number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -54,7 +54,7 @@
         android:layout_marginTop="36dp"
         android:gravity="center_horizontal"
         android:onClick="check"
-        android:text="Guess"
+        android:text="@string/guess"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/count" />
 </androidx.constraintlayout.widget.ConstraintLayout>

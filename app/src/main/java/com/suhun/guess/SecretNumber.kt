@@ -1,5 +1,7 @@
 package com.suhun.guess
 
+import android.content.Context
+import android.content.res.Resources
 import java.util.Random
 
 class SecretNumber{
@@ -8,14 +10,14 @@ class SecretNumber{
 
     /*fun verify(num:Int) = if(num>guessNumber) "Smaller!!!"
                             else if(num<guessNumber) "Bigger!!!" else "You got it!!!"*/
-    fun verify(num:Int):String{
+    fun verify(r:Resources, num:Int):String{
         count++
         if(num>randomNumber) {
-            return "Smaller!!!"
+            return r.getString(R.string.smaller)
         }else if(num<randomNumber){
-            return "Bigger!!!"
+            return r.getString(R.string.bigger)
         }else {
-            return "You got it!!!"
+            return r.getString(R.string.you_got_it)
         }
     }
 }
