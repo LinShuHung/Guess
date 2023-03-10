@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.suhun.guess.databinding.ActivityMainBinding
 import com.suhun.guess.databinding.LinearMainBinding
 //1.ConstraintLayout
@@ -34,8 +35,9 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     fun check(view:View){
-        binding.information.text = secretNumber.verify(binding.userInput.text.toString().toInt())
+        var message:String= secretNumber.verify(binding.userInput.text.toString().toInt())
         binding.count.text = "${secretNumber.count.toString()} times"
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
 }
