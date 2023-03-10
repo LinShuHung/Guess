@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.suhun.guess.databinding.ActivityMainBinding
 import com.suhun.guess.databinding.LinearMainBinding
 //1.ConstraintLayout
@@ -37,7 +38,12 @@ class MainActivity : AppCompatActivity() {
     fun check(view:View){
         var message:String= secretNumber.verify(binding.userInput.text.toString().toInt())
         binding.count.text = "${secretNumber.count.toString()} times"
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+//        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+        AlertDialog.Builder(this).setTitle("Guess Message")
+            .setMessage(message)
+            .setPositiveButton("ok",null)
+            .show()
+
     }
 
 }
