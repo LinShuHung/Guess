@@ -5,4 +5,5 @@
     <string name="smaller">Smaller!!!</string>
     <string name="bigger">Bigger!!!</string>
     <string name="you_got_it">You got it!!!</string>
+    <string name="dialog_title_guess_message">Guess Message</string>
 </resources>

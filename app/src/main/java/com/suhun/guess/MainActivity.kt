@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         var message:String= secretNumber.verify(r, binding.userInput.text.toString().toInt())
         binding.count.text = "${secretNumber.count.toString()} times"
 //        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-        AlertDialog.Builder(this).setTitle("Guess Message")
+        AlertDialog.Builder(this).setTitle(getString(R.string.dialog_title_guess_message))
             .setMessage(message)
             .setPositiveButton("ok",null)
             .show()
